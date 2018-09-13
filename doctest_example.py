@@ -51,13 +51,20 @@ def fib(n):
         raise OverflowError("n is too large")
     
     # Here is the magic formula:
-    return (PHI**n - (-1/PHI)**n)/math.sqrt(5)
+    return int((PHI**n - (-1/PHI)**n)/math.sqrt(5))
     
     
     # change the return statement to the line below
     # in order to resolve the errors
     # return int((PHI**n - (-1/PHI)**n)/math.sqrt(5))
-                
+def main():
+    num = float(input('Enter a positive integer'))
+    try:
+        print(f'The {int(num)}th Fibonacci number is {fib(num)}.')
+    except e as Exception:
+        print(f'Error: {e}')
+        
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
+    main()

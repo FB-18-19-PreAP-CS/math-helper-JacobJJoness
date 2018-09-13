@@ -3,14 +3,24 @@ import math
 ''' Welcome to the math helper.
 '''
 def quadratic_formula(a,b,c):
-    cookies = (b**2)-(4*a*c)
-    math.sqrt(cookies)
-    print(cookies)
+    x = (b**2)-(4*a*c)
+    math.sqrt(x)
+    print(x)
+    
+    
+def pythag_theo(a,b):
+    c = ((a**2)+(b**2))
+    print(c)
+    
+pythag_theo(4,4)
+    
+    
+    
+
     
     
     
     
     
-    
-quadratic_formula(3,4,5)
+
     
