@@ -10,7 +10,8 @@ def quadratic_formula(a,b,c):
     
 def pythag_theo(a,b):
     c = ((a**2)+(b**2))
-    print(c)
+    d = math.sqrt(c)
+    print(d)
     
 pythag_theo(4,4)
     
