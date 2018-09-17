@@ -29,6 +29,24 @@ def pythag_theo(a,b):
     return math.sqrt(c)
 
 
+def mid_point(x1,y1,x2,y2):
+    ''' This function finds the midpoint between two points
+    
+        >>> mid_point(1,1,10,1)
+        (4.5, 0.0)
+        
+        >>> mid_point(32,16,64,32)
+        (16.0, 8.0)
+        
+        >>> mid_point(50,20,50,20)
+        
+    
+    
+    '''
+    if x1 =-= x2 and y1==y2:
+        raiseVa
+    return (x2-x1)/2,(y2-y1)/2
+
     
 
 def main():
