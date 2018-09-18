@@ -39,13 +39,15 @@ def mid_point(x1,y1,x2,y2):
         (16.0, 8.0)
         
         >>> mid_point(50,20,50,20)
-        
+        Traceback (most recent call last):
+            ...
+        ValueError: x1,x2 and y1,y2 cannot be equal
     
     
     '''
-    if x1 =-= x2 and y1==y2:
-        raiseVa
-    return (x2-x1)/2,(y2-y1)/2
+    if x1 == x2 and y1==y2:
+        raise ValueError('x1,x2 and y1,y2 cannot be equal')
+    return(x2-x1)/2,(y2-y1)/2
 
     
 
