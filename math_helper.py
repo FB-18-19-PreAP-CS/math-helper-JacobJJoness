@@ -49,7 +49,42 @@ def mid_point(x1,y1,x2,y2):
         raise ValueError('x1,x2 and y1,y2 cannot be equal')
     return(x2-x1)/2,(y2-y1)/2
 
+def distance_formula(x1,x2,y1,y2):
+    ''' This function finds the distance between two points.
+
+        >>> distance_formula(0,10,0,0)
+        10.0
+        
+        
+        >>> distance_formula(0,0,0,0)
+        Traceback (most recent call last):
+            ...
+        ValueError: x1,x2 and y1,y2 cannot be equal
+        
+        
+    '''
+    if x1 == x2 and y1==y2:
+        raise ValueError('x1,x2 and y1,y2 cannot be equal')
+    return math.sqrt((x2-x1)**2)+((y2-y1)**2)
     
+    
+def quadratic_equation(a,b,c):
+    ''' This formula utilizes the qaudratic equation to
+        find the zeros
+        
+        >>> quadratic_equation(2,-14,24)
+        '4.0 and 3.0'
+        
+        >>> quadratic_equation(4,1,4)
+        '2.0'
+        
+    '''
+    if a==0:
+        print('No real answer')
+    ans = (-1*b + math.sqrt(b**2-4*a*c))/(2*a), (-1*b - math.sqrt(b**2-4*a*c))/(2*a)
+    if ans[0]==ans[1]:
+        f'{ans[0]}'
+    return f'{ans[0]} and {ans[1]}'
 
 def main():
     #pythag_theo
