@@ -2,8 +2,10 @@ import math
 
 ''' Welcome to the math helper.
 '''
-
-    
+def pythag_input():
+    a = float(input('what is a? '))
+    b = float(input('what is b? '))
+    print (pythag_theo(a,b))
     
 def pythag_theo(a,b):
     ''' This function calculates the pythagorean theorem for the user
@@ -15,16 +17,17 @@ def pythag_theo(a,b):
         >>> pythag_theo(0,5)
         Traceback (most recent call last):
         ...
-        ValueError: a or b must be positive
+        ValueError: a or b must be greater than 0
          
         >>> pythag_theo(-5,5)
         Traceback (most recent call last):
         ...
-        ValueError: a or b must be positive
+        ValueError: a or b must be greater than 0
     
     '''
-    if a<= 0 or b <= 0:
-        raise ValueError("a or b must be positive")
+    
+    if a <= 0 or b <= 0:
+        raise ValueError("a or b must be greater than 0")
     c = ((a**2)+(b**2))
     return math.sqrt(c)
 
@@ -78,19 +81,33 @@ def quadratic_equation(a,b,c):
         >>> quadratic_equation(1,2,1)
         '-1.0'
         
+        >>> quadratic_equation(1,1,0)
+        '0.0 and -1.0'
+        
+        
+        
+        ...
+        
+        
+        
     '''
     if a==0:
-        print('No real answer')
+        print('a cannot be 0')
+    if b**2-4*a*c<0:
+        return ' no real solutions'
     ans = (-1*b + math.sqrt(b**2-4*a*c))/(2*a), (-1*b - math.sqrt(b**2-4*a*c))/(2*a)
     if ans[0]==ans[1]:
         return f'{ans[0]}'
     else:
         return f'{ans[0]} and {ans[1]}'
 
-def main():
-    #pythag_theo
-    pass
+pythag_input()
 
+
+def main():
+    
+    
+    pass
     
 if __name__ == "__main__":
     import doctest
