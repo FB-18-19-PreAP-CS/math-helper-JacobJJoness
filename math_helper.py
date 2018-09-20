@@ -75,16 +75,17 @@ def quadratic_equation(a,b,c):
         >>> quadratic_equation(2,-14,24)
         '4.0 and 3.0'
         
-        >>> quadratic_equation(4,1,4)
-        '2.0'
+        >>> quadratic_equation(1,2,1)
+        '-1.0'
         
     '''
     if a==0:
         print('No real answer')
     ans = (-1*b + math.sqrt(b**2-4*a*c))/(2*a), (-1*b - math.sqrt(b**2-4*a*c))/(2*a)
     if ans[0]==ans[1]:
-        f'{ans[0]}'
-    return f'{ans[0]} and {ans[1]}'
+        return f'{ans[0]}'
+    else:
+        return f'{ans[0]} and {ans[1]}'
 
 def main():
     #pythag_theo
