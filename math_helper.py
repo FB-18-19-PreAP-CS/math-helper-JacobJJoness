@@ -7,6 +7,19 @@ def pythag_input():
     b = float(input('what is b? '))
     print (pythag_theo(a,b))
     
+def mid_point_input():
+    x1 = float(input('what is x1? '))
+    y1 = float(input('what is y1? '))
+    x2 = float(input('what is x2? '))
+    y2 = float(input('what is y2? '))
+    print (mid_point(x1,y1,x2,y2))
+def distance_input():
+    x1 = float(input('what is x1? '))
+    y1 = float(input('what is y1? '))
+    x2 = float(input('what is x2? '))
+    y2 = float(input('what is y2? '))
+    print (distance_formula(x1,y1,x2,y2))
+    
 def pythag_theo(a,b):
     ''' This function calculates the pythagorean theorem for the user
         while also checking for impossible inputs
@@ -101,7 +114,7 @@ def quadratic_equation(a,b,c):
     else:
         return f'{ans[0]} and {ans[1]}'
 
-pythag_input()
+distance_input()
 
 
 def main():
