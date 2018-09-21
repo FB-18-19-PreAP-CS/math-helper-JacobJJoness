@@ -20,6 +20,12 @@ def distance_input():
     y2 = float(input('what is y2? '))
     print (distance_formula(x1,y1,x2,y2))
     
+def qaud_formula():
+    a = float(input('what is a? '))
+    b = float(input('what is b? '))
+    c = float(input('what is c? '))
+    print (quadratic_equation(a,b,c))
+    
 def pythag_theo(a,b):
     ''' This function calculates the pythagorean theorem for the user
         while also checking for impossible inputs
@@ -36,6 +42,15 @@ def pythag_theo(a,b):
         Traceback (most recent call last):
         ...
         ValueError: a or b must be greater than 0
+        
+        >>> pythag_theo(12,5)
+        13.0
+        
+        >>> pythag_theo(24,7)
+        25.0
+        
+        
+        
     
     '''
     
@@ -58,6 +73,16 @@ def mid_point(x1,y1,x2,y2):
         Traceback (most recent call last):
             ...
         ValueError: x1,x2 and y1,y2 cannot be equal
+        
+        >>> mid_point(30,20,30,20)
+        Traceback (most recent call last):
+            ...
+        ValueError: x1,x2 and y1,y2 cannot be equal
+        
+        >>> mid_point(-32,-16,-64,-32)
+        (-16.0, -8.0)
+        
+        
     
     
     '''
@@ -77,6 +102,12 @@ def distance_formula(x1,y1,x2,y2):
         
         >>> distance_formula(3,5,3,5)
         0.0
+        
+        >>> distance_formula(-3,-5,3,5)
+        11.661903789690601
+        
+        >>> distance_formula(0,10,10,0)
+        14.142135623730951
         
         
     '''
@@ -99,7 +130,10 @@ def quadratic_equation(a,b,c):
         >>> quadratic_equation(1,1,0)
         '0.0 and -1.0'
         
-        
+        >>> quadratic_equation(2,5,3)
+        '-1.0 and -1.5'
+        >>> quadratic_equation(1,5,4)
+        '-1.0 and -4.0'
         
         ...
         
@@ -121,13 +155,26 @@ def quadratic_equation(a,b,c):
 
 def main():
     
-    
-    pass
+    while True:
+        w = int(input(" 1. Pythagorean Theorum 2. Distance Formula 3. Mid-point Formula 4. Qaudratic Eqaution "))
+  
+        if w ==1:
+            pythag_input()
+        elif w ==2:
+            distance_input()
+        elif w ==3:
+            mid_point_input()
+        elif w ==4:
+            qaud_formula()
+        else:
+            print('Not a valid choice')
+       
+        
     
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-    #main()
+    main()
     
     
     
