@@ -65,7 +65,7 @@ def mid_point(x1,y1,x2,y2):
         raise ValueError('x1,x2 and y1,y2 cannot be equal')
     return(x2-x1)/2,(y2-y1)/2
 
-def distance_formula(x1,x2,y1,y2):
+def distance_formula(x1,y1,x2,y2):
     ''' This function finds the distance between two points.
 
         >>> distance_formula(0,10,0,0)
@@ -73,15 +73,17 @@ def distance_formula(x1,x2,y1,y2):
         
         
         >>> distance_formula(0,0,0,0)
-        Traceback (most recent call last):
-            ...
-        ValueError: x1,x2 and y1,y2 cannot be equal
+        0.0
+        
+        >>> distance_formula(3,5,3,5)
+        0.0
         
         
     '''
-    if x1 == x2 and y1==y2:
-        raise ValueError('x1,x2 and y1,y2 cannot be equal')
-    return math.sqrt((x2-x1)**2)+((y2-y1)**2)
+    # Why can't they be equal?
+    # if x1 == x2 and y1==y2:
+    #    raise ValueError('x1,x2 and y1,y2 cannot be equal')
+    return math.sqrt((x2-x1)**2+(y2-y1)**2)
     
     
 def quadratic_equation(a,b,c):
@@ -114,7 +116,7 @@ def quadratic_equation(a,b,c):
     else:
         return f'{ans[0]} and {ans[1]}'
 
-distance_input()
+#distance_input()
 
 
 def main():
