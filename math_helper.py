@@ -25,6 +25,13 @@ def qaud_formula():
     b = float(input('what is b? '))
     c = float(input('what is c? '))
     print (quadratic_equation(a,b,c))
+
+def run_circ():
+    print("You selected area of a circle.")
+    r= float(input("Enter the radius: "))
+    if r < 0:
+        raise ValueError("Negatives cannot be used in finding the area of a circle")
+    print("The area of the circle is {}".format(area_circ(r)))
     
 def pythag_theo(a,b):
     ''' This function calculates the pythagorean theorem for the user
@@ -149,14 +156,34 @@ def quadratic_equation(a,b,c):
         return f'{ans[0]}'
     else:
         return f'{ans[0]} and {ans[1]}'
+def area_circ(r):
+    '''returns the area of a circle
 
+    >>> area_circ(6)
+    113.04
+    
+    >>> area_circ(-2)
+    ValueError("Negatives cannot be used in finding the area of a circle")
+    
+    >>> area_circ(11)
+    379.94
+    
+    >>> area_circ(1.05) 
+    3.46185
+    
+    >>> area_circ(-8.9)
+    ValueError("Negatives cannot be used in finding the area of a circle")
+    '''
+    r2= r**2
+    r3 = r2*3.14
+    return(round(r3,5))
 #distance_input()
 
 
 def main():
     
     while True:
-        w = int(input(" 1. Pythagorean Theorum 2. Distance Formula 3. Mid-point Formula 4. Qaudratic Eqaution "))
+        w = int(input(" 1. Pythagorean Theorum 2. Distance Formula 3. Mid-point Formula 4. Qaudratic Eqaution 5.Area of a circle "))
   
         if w ==1:
             pythag_input()
@@ -166,6 +193,8 @@ def main():
             mid_point_input()
         elif w ==4:
             qaud_formula()
+        elif w ==5:
+            run_circ()
         else:
             print('Not a valid choice')
        
